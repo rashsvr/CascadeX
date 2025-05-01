@@ -3,6 +3,8 @@
 ## Project Overview
 The Cascadex website is a modern, responsive single-page application designed to showcase an AI-powered automation tool. The site highlights key features, comparisons with competitors, pricing plans, testimonials, and a contact section, all styled with a futuristic, tech-inspired aesthetic.
 
+![HomePage](home.png)
+
 ## Design Approach
 The website was designed with the following principles in mind:
 
@@ -34,13 +36,6 @@ The website includes the following key features:
 5. **Contact Form**:
    - A styled form with glowing inputs (no backend submission implemented) provides a professional interface for user inquiries.
 
-## Project Screenshot
-Below is a screenshot of the Cascadex website, showcasing the hero section with its futuristic design and Lottie animation:
-
-![Cascadex Website Screenshot](home.png)
-
-## Reason for Creation
-This website was developed as the final project for the "Web Design for Beginners" online learning program conducted by the Department of Information Technology, Faculty of Information Technology, University of Moratuwa, through the Centre for Open & Distance Learning (CODL). The goal was to apply the skills learned in HTML, CSS, and JavaScript to create a fully functional, visually appealing website. I chose to design a site for Cascadex, a fictional AI automation tool, to demonstrate my ability to build a modern, responsive, and interactive web page that aligns with current industry standards and trends.
 
 ## Technical Stack
 - **HTML/CSS**: Structured with semantic HTML and styled using Tailwind CSS and custom styles in `styles.css`.
@@ -50,6 +45,9 @@ This website was developed as the final project for the "Web Design for Beginner
   - GSAP and ScrollTrigger for animations.
   - DotLottie Player for animations.
 - **Fonts**: Orbitron for headings, Inter for body text, sourced from Google Fonts.
+
+## Reason for Creation
+This website was developed as the final project for the "Web Design for Beginners" online learning program conducted by the Department of Information Technology, Faculty of Information Technology, University of Moratuwa, through the Centre for Open & Distance Learning (CODL). The goal was to apply the skills learned in HTML, CSS, and JavaScript to create a fully functional, visually appealing website. I chose to design a site for Cascadex, a fictional AI automation tool, to demonstrate my ability to build a modern, responsive, and interactive web page that aligns with current industry standards and trends.
 
 ## How to Run
 1. Clone the repository.
