@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascadex - AI Agent & Automation Tool</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="flex flex-col min-h-screen">
+    <!-- Navbar -->
+    <nav class="navbar fixed w-full shadow-xl z-50">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="text-2xl font-bold text-white">Cascadex</a>
+                <button id="navbar-toggle" class="text-white lg:hidden focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                <div id="navbar-menu" class="hidden lg:flex lg:items-center">
+                    <ul class="flex flex-col lg:flex-row lg:space-x-8">
+                        <li><a href="#home" class="text-white navbar-link py-2">Home</a></li>
+                        <li><a href="#features" class="text-white navbar-link py-2">Features</a></li>
+                        <li><a href="#gallery" class="text-white navbar-link py-2">Gallery</a></li>
+                        <li><a href="#pricing" class="text-white navbar-link py-2">Pricing</a></li>
+                        <li><a href="#testimonials" class="text-white navbar-link py-2">Testimonials</a></li>
+                        <li><a href="#contact" class="text-white navbar-link py-2">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-28 pb-20 flex-grow">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 animate-section">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 section-title">Power Your Future with <span class="text-[#00f5d4]">Cascadex</span></h1>
+                    <p class="text-lg text-gray-300 mb-8 max-w-lg">Cascadex delivers cutting-edge AI agents and automation tools to revolutionize workflows, enhance productivity, and ignite innovation.</p>
+                    <a href="#contact" class="inline-block glow-button text-white px-6 py-3 text-lg">Launch Now</a>
+                </div>
+                <div class="lg:w-1/2">
+                    <dotlottie-player src="https://lottie.host/768897f0-c0bb-4685-a1d8-ca81a0583eb0/cr01V4mBY2.lottie" background="transparent" speed="1" loop autoplay></dotlottie-player>
+                </div>
+            </div>
+            <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center card p-6 animate-section">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-[#00f5d4]" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1.612 10.867l.756-1.288a1 1 0 0 1 1.545-.225l1.074 1.005a.986.986 0 0 0 1.36-.011l.038-.037a.882.882 0 0 0 .26-.755c-.075-.548.37-1.033.92-1.099.728-.086 1.587-.324 1.728-.957.086-.386-.114-.83-.361-1.2-.207-.312 0-.8.374-.8.123 0 .24-.055.318-.15l.393-.474c.196-.237.491-.368.797-.403.554-.064 1.407-.277 1.583-.973.098-.391-.192-.634-.484-.88-.254-.212-.51-.426-.515-.741a6.998 6.998 0 0 1 3.425 7.692 1.015 1.015 0 0 0-.087-.063l-.316-.204a1 1 0 0 0-.977-.06l-.169.082a1 1 0 0 1-.741.051l-1.021-.329A1 1 0 0 0 11.205 9h-.165a1 1 0 0 0-.945.674l-.172.499a1 1 0 0 1-.404.514l-.802.518a1 1 0 0 0-.458.84v.455a1 1 0 0 0 1 1h.257a1 1 0 0 1 .542.16l.762.49a.998.998 0 0 0 .283.126 7.001 7.001 0 0 1-9.49-3.409Z"></path>
+                    </svg>
+                    <h4 class="text-lg font-semibold text-white">Global Reach</h4>
+                    <p class="text-gray-300">Scale automation worldwide with our advanced AI solutions.</p>
+                </div>
+                <div class="text-center card p-6 animate-section">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-[#00f5d4]" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path>
+                    </svg>
+                    <h4 class="text-lg font-semibold text-white">Community Hub</h4>
+                    <p class="text-gray-300">Connect with innovators in our vibrant AI community.</p>
+                </div>
+                <div class="text-center card p-6 animate-section">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-[#00f5d4]" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"></path>
+                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"></path>
+                    </svg>
+                    <h4 class="text-lg font-semibold text-white">Custom Workflows</h4>
+                    <p class="text-gray-300">Design automation tailored to your business needs.</p>
+                </div>
+                <div class="text-center card p-6 animate-section">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-[#00f5d4]" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                    </svg>
+                    <h4 class="text-lg font-semibold text-white">Elite Support</h4>
+                    <p class="text-gray-300">Expert AI guidance available 24/7.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-[#0a192f]">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 animate-section">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white section-title">Why Cascadex?</h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto">Unleash the power of AI automation with our advanced features.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card p-8 animate-section">
+                    <h3 class="text-xl font-semibold text-white mb-4">AI-Powered Agents</h3>
+                    <p class="text-gray-300 mb-4">Intelligent agents that evolve to optimize your processes.</p>
+                    <ul class="list-disc list-inside text-gray-300 mb-4">
+                        <li>Self-learning algorithms</li>
+                        <li>Real-time optimization</li>
+                        <li>Customizable workflows</li>
+                    </ul>
+                    <p id="more-text" class="text-gray-300 hidden">Our AI agents adapt to your unique needs, ensuring maximum efficiency.</p>
+                    <button id="read-more" class="glow-button text-white px-4 py-2 text-sm">Read More</button>
+                </div>
+                <div class="card p-8 animate-section">
+                    <h3 class="text-xl font-semibold text-white mb-4">Seamless Integration</h3>
+                    <p class="text-gray-300">Sync effortlessly with your existing tech stack.</p>
+                </div>
+                <div class="card p-8 animate-section">
+                    <h3 class="text-xl font-semibold text-white mb-4">Real-Time Analytics</h3>
+                    <p class="text-gray-300">Actionable insights with live data tracking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 animate-section">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white section-title">Our Technology in Action</h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto">Explore snapshots of Cascadex's powerful AI tools.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="gallery-item animate-section">
+                    <img src="https://source.unsplash.com/random/600x400/?ai" alt="AI Dashboard" class="w-full h-64 object-cover rounded-lg">
+                </div>
+                <div class="gallery-item animate-section">
+                    <img src="https://source.unsplash.com/random/600x400/?automation" alt="Automation Workflow" class="w-full h-64 object-cover rounded-lg">
+                </div>
+                <div class="gallery-item animate-section">
+                    <img src="https://source.unsplash.com/random/600x400/?technology" alt="Tech Integration" class="w-full h-64 object-cover rounded-lg">
+                </div>
+                <div class="gallery-item animate-section">
+                    <img src="https://source.unsplash.com/random/600x400/?data" alt="Data Analytics" class="w-full h-64 object-cover rounded-lg">
+                </div>
+                <div class="gallery-item animate-section">
+                    <img src="https://source.unsplash.com/random/600x400/?machine-learning" alt="Machine Learning" class="w-full h-64 object-cover rounded-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-[#0a192f]">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 animate-section">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white section-title">Pricing Plans</h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto">Choose the plan that suits your business needs.</p>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-gray-300 animate-section">
+                    <thead>
+                        <tr class="bg-[#1b263b]">
+                            <th class="p-4">Plan</th>
+                            <th class="p-4">Price</th>
+                            <th class="p-4">Features</th>
+                            <th class="p-4">Support</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-700">
+                            <td class="p-4">Basic</td>
+                            <td class="p-4">$29/month</td>
+                            <td class="p-4">1 AI Agent, Basic Analytics</td>
+                            <td class="p-4">Email Support</td>
+                        </tr>
+                        <tr class="border-b border-gray-700">
+                            <td class="p-4">Pro</td>
+                            <td class="p-4">$99/month</td>
+                            <td class="p-4">5 AI Agents, Advanced Analytics</td>
+                            <td class="p-4">Priority Email & Chat</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4">Enterprise</td>
+                            <td class="p-4">Custom</td>
+                            <td class="p-4">Unlimited Agents, Full Suite</td>
+                            <td class="p-4">24/7 Dedicated Support</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 animate-section">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white section-title">User Voices</h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto">See how Cascadex transforms businesses.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card text-white p-8 animate-section">
+                    <svg class="w-12 h-12 mb-4 text-[#00f5d4]" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"></path>
+                    </svg>
+                    <p class="italic">"Cascadex's AI agents are a game-changer for our operations."</p>
+                    <h5 class="mt-4 font-semibold">Sarah Lee</h5>
+                    <p class="text-gray-400">CEO, TechTrend</p>
+                </div>
+                <div class="card text-white p-8 animate-section">
+                    <svg class="w-12 h-12 mb-4 text-[#00f5d4]" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"></path>
+                    </svg>
+                    <p class="italic">"Real-time analytics empowered our decision-making."</p>
+                    <h5 class="mt-4 font-semibold">James Carter</h5>
+                    <p class="text-gray-400">CTO, InnovateCorp</p>
+                </div>
+                <div class="card text-white p-8 animate-section">
+                    <svg class="w-12 h-12 mb-4 text-[#00f5d4]" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"></path>
+                    </svg>
+                    <p class="italic">"Integration was flawless. Cascadex is a must-have!"</p>
+                    <h5 class="mt-4 font-semibold">Emily Wong</h5>
+                    <p class="text-gray-400">Operations Manager, GrowEasy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-[#0a192f]">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 animate-section">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white section-title">Connect Now</h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto">Ready to transform your business? Reach out today!</p>
+            </div>
+            <div class="flex flex-col lg:flex-row justify-between gap-12">
+                <div class="lg:w-1/2 animate-section">
+                    <h3 class="text-xl font-semibold text-white mb-6">Send a Signal</h3>
+                    <div>
+                        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-6">
+                            <input type="text" placeholder="First Name" class="w-full sm:w-1/2 p-4">
+                            <input type="text" placeholder="Last Name" class="w-full sm:w-1/2 p-4">
+                        </div>
+                        <input type="email" placeholder="Email Address" class="w-full p-4 mb-6">
+                        <textarea placeholder="Your Message" rows="5" class="w-full p-4 mb-6"></textarea>
+                        <button class="glow-button text-white px-8 py-4 text-lg">Transmit</button>
+                    </div>
+                </div>
+                <div class="lg:w-1/3 animate-section">
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-white">Our Hub</h3>
+                        <p class="text-gray-300">123 AI Nexus, Cyber City, Tech State</p>
+                    </div>
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-white">Comm Link</h3>
+                        <p class="text-gray-300">+1 987-654-3210</p>
+                    </div>
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-white">Digital Relay</h3>
+                        <p class="text-gray-300">support@cascadex.com</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-white">Network</h3>
+                        <div class="flex space-x-6 mt-4">
+                            <a href="#" class="text-[#00f5d4] hover:text-[#7b2cbf]"><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0z"></path></svg></a>
+                            <a href="#" class="text-[#00f5d4] hover:text-[#7b2cbf]"><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path></svg></a>
+                            <a href="#" class="text-[#00f5d4] hover:text-[#7b2cbf]"><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path></svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-8">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2025 Cascadex. All rights reserved.</p>
+                <div class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-6 text-sm mt-4 lg:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-[#00f5d4] transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-[#00f5d4] transition">Terms</a>
+                    <a href="#" class="text-gray-400 hover:text-[#00f5d4] transition">Cookies</a>
+                    <a href="#" class="text-gray-400 hover:text-[#00f5d4] transition">Sitemap</a>
+                </div>
+                <div class="flex space-x-6 mt-6 lg:mt-0">
+                    <a href="#" class="text-[#00f5d4] hover:text-[#7b2cbf]"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0z"></path></svg></a>
+                    <a href="#" class="text-[#00f5d4] hover:text-[#7b2cbf]"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path></svg></a>
+                    <a href="#" class="text-[#00f5d4] hover:text-[#7b2cbf]"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="script.js"></script>
+</body>
+</html>
