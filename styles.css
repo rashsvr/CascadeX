@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .glow-button {
-    background: linear-gradient(45deg, #00f5d4, #7b2cbf);
+    background: linear-gradient(45deg, #00f5d4, #134f72);
     border-radius: 8px;
     font-family: 'Orbitron', sans-serif;
     font-weight: 700;
@@ -76,14 +76,14 @@ p {
     font-weight: 400;
 }
 
-ul.list-disc {
+ul.list-none {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
 }
 
-input, textarea {
+.input-glow {
     background: rgba(255, 255, 255, 0.08) !important;
-    border: 1px solid rgba(0, 245, 212, 0.3) !important;
+    border: none !important;
     color: #e0e1dd !important;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -91,8 +91,7 @@ input, textarea {
     transition: all 0.3s ease;
 }
 
-input:focus, textarea:focus {
-    border-color: #00f5d4 !important;
+.input-glow:focus {
     box-shadow: 0 0 12px rgba(0, 245, 212, 0.6) !important;
     outline: none;
 }
@@ -114,35 +113,73 @@ dotlottie-player {
     margin: 0 auto;
 }
 
-.gallery-item {
-    overflow: hidden;
-    border-radius: 12px;
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-33.333%);
+    }
 }
 
-.gallery-item img {
-    transition: transform 0.3s ease;
+.animate-scroll {
+    animation: scroll 20s linear infinite;
 }
 
-.gallery-item img:hover {
-    transform: scale(1.1);
+.carousel-track {
+    display: flex;
+    width: fit-content;
 }
 
-table {
+.comparison-table {
     background: rgba(255, 255, 255, 0.05);
-    border-collapse: collapse;
+    border: 1px solid rgba(0, 245, 212, 0.3);
     border-radius: 12px;
     overflow: hidden;
 }
 
-th, td {
+.comparison-table th {
+    background: linear-gradient(45deg, #00f5d4, #28776d);
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 2px solid rgba(0, 245, 212, 0.5);
+}
+
+.comparison-table td {
+    padding: 16px;
+    border-bottom: 1px solid rgba(0, 245, 212, 0.2);
     font-family: 'Inter', sans-serif;
     font-weight: 400;
 }
 
-th {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 700;
+.comparison-table tr:hover {
+    background: rgba(0, 245, 212, 0.1);
+}
+
+.comparison-table .feature {
+    font-weight: 600;
+    color: #fff;
+}
+
+.comparison-table .check::before {
+    content: '✔';
     color: #00f5d4;
+    font-weight: bold;
+}
+
+.comparison-table .cross::before {
+    content: '✖';
+    color: #ff4d4f;
+    font-weight: bold;
+}
+
+.comparison-table .partial::before {
+    content: '⚬';
+    color: #ffa500;
+    font-weight: bold;
+    margin-right: 4px;
 }
 
 @media (max-width: 640px) {
@@ -155,13 +192,9 @@ th {
     dotlottie-player {
         max-width: 100%;
     }
-    .gallery-item img {
-        height: 200px;
-    }
-    table {
+    .comparison-table th,
+    .comparison-table td {
+        padding: 8px;
         font-size: 0.9rem;
-    }
-    th, td {
-        padding: 0.75rem;
     }
 }
